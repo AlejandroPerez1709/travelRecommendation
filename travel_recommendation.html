@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelBloom - Recomendaciones de Viaje</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <h2>TravelBloom</h2>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Sobre Nosotros</a></li>
+        <li><a href="#">Contáctanos</a></li>
+      </ul>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Ingresa un destino o palabra clave"
+        />
+        <button id="btnSearch">Buscar</button>
+        <button id="btnClear">Limpiar</button>
+      </div>
+    </nav>
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="hero-content">
+          <h1>EXPLORA DESTINOS DE ENSUEÑO</h1>
+          <p>
+            Descubre lugares increíbles, culturas fascinantes y planifica tu
+            próxima aventura con nuestras recomendaciones personalizadas.
+          </p>
+          <button class="btn-book">Reservar ahora</button>
+        </div>
+        <div id="resultsContainer" class="results-grid"></div>
+      </section>
+    </main>
+
+    <script src="travel_recommendation.js"></script>
+  </body>
+</html>

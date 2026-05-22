@@ -1,0 +1,134 @@
+/* Reset básico para márgenes y fuente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* --- TAREA 2: Barra de navegación --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a3636; /* Color oscuro similar al ejemplo */
+  padding: 15px 30px;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #4caf50;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+}
+
+.search-container input {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  width: 250px;
+}
+
+.search-container button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2e8b57;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#btnClear {
+  background-color: #008080;
+}
+
+/* --- TAREA 3: Sección de Inicio (Hero) --- */
+.hero-section {
+  /* IMPORTANTE: Aquí debes poner el nombre de la imagen de fondo que descargues */
+  background-image: url("images/fondo-principal.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 65px); /* Ajusta la altura restando el navbar */
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  position: relative;
+}
+
+.hero-content {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fondo oscuro semitransparente para que el texto resalte */
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.btn-book {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* --- TAREA 8: Cuadrícula para los resultados de búsqueda --- */
+/* Se utiliza display: grid como lo piden las instrucciones */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  position: absolute;
+  right: 50px;
+  width: 50%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Estilos para las tarjetas dinámicas que crearemos con JavaScript */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
